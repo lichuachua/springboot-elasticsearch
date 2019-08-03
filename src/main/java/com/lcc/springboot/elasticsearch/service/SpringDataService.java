@@ -13,4 +13,32 @@ public interface SpringDataService {
      */
     List<Book> findByTitle(String title);
 
+    /**
+     * 添加类型
+     * @param book
+     * @return
+     */
+    String add(Book book);
+
+    /**
+     * 删除
+     * @param id
+     * @return
+     */
+    String delete(String id);
+
+    /**
+     * 根据Id查询
+     * @param id
+     * @return
+     */
+    Book queryBookById(String id);
+
+    /**
+     * 更新
+     * @param book
+     * @return
+     */
+    String update(Book book);
+
 }

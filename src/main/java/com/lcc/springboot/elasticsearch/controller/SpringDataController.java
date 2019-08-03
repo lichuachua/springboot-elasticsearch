@@ -26,5 +26,53 @@ public class SpringDataController {
         return bookList;
     }
 
+    /**
+     * 根据Id查询
+     * @param id
+     * @return
+     */
+    @GetMapping("/book/novel/queryBookById")
+    public Book queryBookById(String id) {
+        Book book = springDataService.queryBookById(id);
+        return book;
+    }
+
+    /**
+     * 添加类型
+     * @param book
+     * @return
+     */
+    @PostMapping("/add/book/novel")
+    public String add(Book book) {
+        String info = springDataService.add(book);
+        return info;
+    }
+
+
+    /**
+     * 删除
+     * @param id
+     * @return
+     */
+    @DeleteMapping("/delete/book/novel")
+    public String delete(String id) {
+        String info = springDataService.delete(id);
+        return info;
+    }
+
+
+    /**
+     * 更新（本质上就是添加）
+     * @param book
+     * @return
+     */
+    @PutMapping("/update/book/novel")
+    public String update(Book book){
+        String info = springDataService.update(book);
+        return info;
+    }
+
+
+
 
 }

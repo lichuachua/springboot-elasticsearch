@@ -16,4 +16,11 @@ public interface BookRepository extends ElasticsearchRepository<Book, String> {
      */
     List<Book> findByTitle(String title);
 
+
+    /**
+     * 根据Id查询
+     * @param id
+     * @return
+     */
+    Book queryBookById(String id);
 }
